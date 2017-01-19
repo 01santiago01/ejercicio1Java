@@ -1,0 +1,60 @@
+package ejercicio1;
+import java.util.Scanner;
+import java.util.Arrays;
+import java.util.List;
+
+public class ColeccionEnteros {
+	
+	private int[] arreglo;
+	static int tamano;
+	Scanner sc = new Scanner(System.in);{
+	
+	System.out.print("Introduzca un número entero: ");
+    tamano = sc.nextInt();
+    System.out.println("El tamaño del arreglo es: " + tamano);
+	
+		arreglo = new int[tamano];
+		for (int i = 0; i<tamano;i++)
+		{
+			arreglo[i] = (int)(Math.random()*15+5);
+			System.out.println("arreglo en indice: " +i+" es igual a: "+ arreglo[i]);
+		}
+	}
+		
+	public void desplgarColeccion(){
+		
+			
+	}
+	
+	public int existeValor (int valor)
+	{
+		int x = tamano;
+		System.out.print("buscar numero: ");
+	     valor=sc.nextInt();
+
+	        for(int i=0;i<tamano;i++){
+	            if (valor == arreglo[i]) {
+	                System.out.println("El valor " +valor+ " ingresado se encuentra en la posición "+i);
+	            }
+	                
+	                //else {
+	                	//System.out.println("El valor " +valor+ " no se encuentra en el arreglo");
+	                	
+	             
+	            //}
+	}
+	 return valor;
+	}
+	
+				
+	
+		public static void main(String[] args) {
+		
+		ColeccionEnteros CE = new ColeccionEnteros();
+		CE.desplgarColeccion();
+		CE.existeValor(tamano);
+		
+		
+				
+	}
+}
