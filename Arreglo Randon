@@ -17,13 +17,14 @@ public class ColeccionEnteros {
 		for (int i = 0; i<tamano;i++)
 		{
 			arreglo[i] = (int)(Math.random()*15+5);
-			System.out.println("arreglo en indice: " +i+" es igual a: "+ arreglo[i]);
+			
 		}
 	}
 		
 	public void desplgarColeccion(){
-		
-			
+		for(int i=0;i<tamano;i++){
+		System.out.println("en el indice "+i+"el valor es "+arreglo[i]);
+		}	
 	}
 	
 	public int existeValor (int valor)
