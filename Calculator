@@ -2,7 +2,16 @@ pack calc {
 class Calculator {
 
 Public void Main (Streang arg[]){
-
+ 
+ switch (month) {
+            case 1:  monthString = "January";
+                     break;
+            case 2:  monthString = "February";
+                     break;
+            case 3:  monthString = "March";
+                     break;
+            case 4:  monthString = "April";
+                     break;
 }
 }
 }
