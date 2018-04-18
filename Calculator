@@ -1,7 +1,33 @@
 pack calc {
 class Calculator {
+int static resultado;
+int var1;
+int var2;
 
-Public void Main (Streang arg[]){
+public void suma(){
+System.out.println("Ingrese numero entero: ")
+Scanner sc = new Scanner(System.in);
+int var1 = sc.nextInt();
+
+System.out.println("Ingrese numero entero: ")
+Scanner sc = new Scanner(System.in);
+int var1 = sc.nextInt();
+
+int resutlado = var1+var2;
+
+}
+public void resta(){
+
+}
+pubic void mult(){
+
+}
+public void div(){
+
+}
+
+
+public static void main (String arg[]){
  
  switch (month) {
             case 1:  monthString = "January";
