@@ -1,43 +1,86 @@
-pack calc {
-class Calculator {
-int static resultado;
-int var1;
-int var2;
 
-public void suma(){
-System.out.println("Ingrese numero entero: ")
-Scanner sc = new Scanner(System.in);
-int var1 = sc.nextInt();
+package calculadora;
 
-System.out.println("Ingrese numero entero: ")
-Scanner sc = new Scanner(System.in);
-int var1 = sc.nextInt();
-
-int resutlado = var1+var2;
-
-}
-public void resta(){
-
-}
-pubic void mult(){
-
-}
-public void div(){
-
-}
+import javax.swing.JFrame;
+import java.util.Scanner;
 
 
-public static void main (String arg[]){
- 
- switch (month) {
-            case 1:  monthString = "January";
+public class calc {
+
+	static int var1;
+	int var2;
+	private static Scanner ingre;
+	
+	
+	public void suma () {
+		System.out.print("Introduzca un número entero: ");
+		Scanner sc = new Scanner(System.in);
+		var1= sc.nextInt();
+		System.out.print("Introduzca un número entero: ");
+		var2= sc.nextInt();
+		int resultado = var1+var2;
+		System.out.print("el resutaltado de la suma es "+resultado);
+	}
+	
+	public void multi (){
+						
+		System.out.print("Introduzca un número entero: ");
+		Scanner sc = new Scanner(System.in);
+		var1= sc.nextInt();
+		System.out.print("Introduzca un número entero: ");
+		var2= sc.nextInt();
+		int resultado = var1*var2;
+		System.out.print("el resutaltado de la suma es "+resultado);
+	}
+	
+	public void rest (){
+		
+		System.out.print("Introduzca un número entero: ");
+		Scanner sc = new Scanner(System.in);
+		var1= sc.nextInt();
+		System.out.print("Introduzca un número entero: ");
+		var2= sc.nextInt();
+		int resultado = var1-var2;
+		System.out.print("el resutaltado de la suma es "+resultado);
+	}
+
+	public void div (){
+		
+		System.out.print("Introduzca un número entero: ");
+		Scanner sc = new Scanner(System.in);
+		var1= sc.nextInt();
+		System.out.print("Introduzca un número entero: ");
+		var2= sc.nextInt();
+		if(var2==0){
+			System.out.println("no puedo divir en cero (0)" );
+			}
+		int resultado = var1/var2;
+		System.out.print("el resutaltado de la suma es "+resultado);
+	}
+
+	public static void main(String ope[]) {
+		
+    	  calc calcular = new calc();
+    	  
+    	  System.out.print("si desea Sumar oprima 1");
+    	  System.out.print("si desea Multiplicar oprima 2");
+    	  System.out.print("si desea Restar oprima 3");
+    	  System.out.print("si desea Dividir oprima 4");
+    	  
+    	  ingre = new Scanner(System.in);
+  			
+    	  var1= ingre.nextInt();
+  			
+  			switch (var1) {
+            case 1:  calcular.suma();
                      break;
-            case 2:  monthString = "February";
+            case 2:  calcular.multi();
                      break;
-            case 3:  monthString = "March";
+            case 3:  calcular.rest();
                      break;
-            case 4:  monthString = "April";
+            case 4:  calcular.div();
                      break;
-}
-}
-}
+  				}
+    	  }
+		}
+
